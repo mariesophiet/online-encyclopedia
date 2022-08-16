@@ -2,6 +2,7 @@ from http.client import HTTPResponse
 from django.shortcuts import render, redirect
 
 from . import util
+import random
 
 def index(request):
     return render(request, "encyclopedia/index.html", {
@@ -72,5 +73,9 @@ def edit(request):
             "title": title,
             "markdown": text
         })
- 
+        
+def random_title(request):
+    all_titles = util.list_entries()
+    random_title = random.choice(all_titles)
+    return redirect('encyclopedia:title', title=random_title)
     
