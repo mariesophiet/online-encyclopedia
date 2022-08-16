@@ -1,16 +1,22 @@
 {% extends "encyclopedia/layout.html" %}
 
 {% block title %}
-    {{ title }}
+{{ title }}
 {% endblock %}
 
 {% block body %}
-    <h1>{{ title }}</h1>
 {% if entry %}
-    <div>{{ entry }}</div>
+<div class="d-flex justify-content-between">
+    <h1>{{ title }}</h1>
+    <form action="{% url 'encyclopedia:edit' %}" method="get">
+        <input name="name" type="hidden" value="{{ title }}">
+        <input type="submit" type="submit" value="Edit Page">
+    </form>
+</div>
+<div>{{ entry }}</div>
 {% else %}
 <div>There is no such entry</div>
 {% endif %}
-   
+
 
 {% endblock %}
