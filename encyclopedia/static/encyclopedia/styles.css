@@ -1,6 +1,11 @@
 body {
     margin: 0;
     background-color: white;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+a:link {
+    color: black;
 }
 
 code {
@@ -35,4 +40,12 @@ textarea {
 
 .sidebar h2 {
     margin-top: 5px;
+}
+
+#textbox {
+    text-align: justify;
+}
+
+#textbox:link {
+    color: blue;
 }

@@ -6,14 +6,22 @@
 
 {% block body %}
 {% if entry %}
-<div class="d-flex justify-content-between">
-    <h1>{{ title }}</h1>
-    <form action="{% url 'encyclopedia:edit' %}" method="get">
-        <input name="name" type="hidden" value="{{ title }}">
-        <input type="submit" type="submit" value="Edit Page">
-    </form>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-12 col-md-8">
+            <h1>{{ title }}</h1>
+        </div>
+        <div class="col-6 col-md-4 mt-4">
+            <form action="{% url 'encyclopedia:edit' %}" method="get">
+                <input name="name" type="hidden" value="{{ title }}">
+                <input type="submit" type="submit" value="Edit Page">
+            </form>
+        </div>
+    </div>
 </div>
-<div>{{ entry|safe }}</div>
+<div class="container-fluid ml-1">
+    <p>{{ entry|safe }}</p>
+</div>
 {% else %}
 <div>There is no such entry</div>
 {% endif %}
