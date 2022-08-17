@@ -23,7 +23,6 @@ textarea {
 }
 
 .search {
-    width: 100%;
     font-size: 15px;
     line-height: 15px;
 }
@@ -47,6 +46,3 @@ textarea {
     border-color: grey;
 }
 
-.form-control {
-    width: 100%;
-}

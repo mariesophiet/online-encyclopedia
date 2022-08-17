@@ -8,10 +8,10 @@
 {% if entry %}
 <div class="container-fluid">
     <div class="row">
-        <div class="col-12 col-md-8">
+        <div class="d-inline">
             <h1>{{ title }}</h1>
         </div>
-        <div class="col-6 col-md-4 mt-4">
+        <div class="d-inline align-self-end mb-3 ml-3">
             <form action="{% url 'encyclopedia:edit' %}" method="get">
                 <input name="name" type="hidden" value="{{ title }}">
                 <input type="submit" type="submit" value="Edit Page">
@@ -19,7 +19,7 @@
         </div>
     </div>
 </div>
-<div class="container-fluid ml-1">
+<div class="container-fluid" id="textbox">
     <p>{{ entry|safe }}</p>
 </div>
 {% else %}
