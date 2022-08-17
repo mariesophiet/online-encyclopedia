@@ -1,7 +1,7 @@
 {% extends "encyclopedia/layout.html" %}
 
 {% block title %}
-    Create New Page
+Create New Page
 {% endblock %}
 
 {% block body %}
@@ -13,9 +13,12 @@
 {% endif %}
 <form action="{% url 'encyclopedia:new' %}" method="post" id="newform">
     {% csrf_token %}
-    <input type="text" name="title" placeholder="Title">
-    <input type="submit">
+    <div class="form-group">
+        <input type="text" name="title" placeholder="Title">
+        <input type="submit">
+    </div>
 </form>
-<textarea name="markdown" form="newform">Enter Markdown text here</textarea>
-
+<div class="form-group">
+    <textarea name="markdown" form="newform" placeholder="Enter Markdown text here"></textarea>
+</div>
 {% endblock %}

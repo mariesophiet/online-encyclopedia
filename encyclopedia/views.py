@@ -37,6 +37,12 @@ def search(request):
         return render(request, "encyclopedia/search.html", {
                 "entries": response
             })
+    # if nothing is searched
+    else:
+        return render(request, "encyclopedia/search.html", {
+                "entries": None
+            })
+    
 
 def new(request):
     # if input post request

@@ -4,10 +4,6 @@ body {
     font-family: Arial, Helvetica, sans-serif;
 }
 
-a:link {
-    color: black;
-}
-
 code {
     white-space: pre;
 }
@@ -46,6 +42,11 @@ textarea {
     text-align: justify;
 }
 
-#textbox:link {
-    color: blue;
+.list-group-item, .list-group-item-action {
+    background-color: #f0f0f0 !important;
+    border-color: grey;
+}
+
+.form-control {
+    width: 100%;
 }
